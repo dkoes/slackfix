@@ -1,5 +1,5 @@
 # slackfix
-Hacks to make slack more usable.  Contributions gratefully accepted.
+Hacks to make slack more usable.  Contributions gratefully accepted.  See extended discussion at [this gist](https://gist.github.com/Kenny-MWI/6b1a88ad38b5ffef347527a82becf054).
 
 ### button.js
 
