@@ -18,3 +18,12 @@ The activity tab is mostly empty space and consumes valuable screen real estate 
   * Properly set size of workspace switcher so it won't overlap buttons if not enough vertical room.
   * Better icon (I just stole an existing asset)
   * Play nicer when the workspace switch isn't open (never true for me)
+    
+### merge.js
+<img width="92" alt="image" src="https://github.com/dkoes/slackfix/assets/2342142/2858da60-e094-46ee-a7f3-2692bd1e8368">
+
+Removes the activity tab and merges it with the workspace switcher.  You can still hide/show the workspace switcher (which now contains the activity tab and the account control panel).  If you don't have enough vertical space to show all your workspaces you can scroll, but there is no visual indicator that content is hidden.
+
+**Ideas for Improvement**
+  * Better indicator that there are hidden workspaces that you can scroll too (dynamically adjust spacing first?)
+  * Labels are hidden on activities, but will come back if you resize the window.
