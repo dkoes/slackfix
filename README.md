@@ -15,5 +15,6 @@ The activity tab is mostly empty space and consumes valuable screen real estate 
 
 **Ideas for Improvement**
   * Clean up code (e.g., get rid of global variables)
+  * Properly set size of workspace switcher so it won't overlap buttons if not enough vertical room.
   * Better icon (I just stole an existing asset)
   * Play nicer when the workspace switch isn't open (never true for me)
