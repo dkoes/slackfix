@@ -1,3 +1,11 @@
+/*
+ Add a button to show/hide activity tab.  This button floats on top of the workspace switcher and won't play nicely with the interface when the workspace switcher isn't open.
+
+ Copy and paste this code into the dev console (run /slackdevtools to open the console or set the SLACK_DEVELOPER_MENU environment variable to TRUE so you can right click on elements).
+
+ The code tries to reinsert itself when slack modifies its interface, but if you need to recreate the button, simply open the dev console again and hit the up arrow.
+*/
+
 var b;
 var thing = $; //no idea why $ isn't defined within handler
 
