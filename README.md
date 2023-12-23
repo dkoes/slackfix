@@ -26,5 +26,5 @@ The activity tab is mostly empty space and consumes valuable screen real estate 
 Removes the activity tab and merges it with the workspace switcher.  You can still hide/show the workspace switcher (which now contains the activity tab and the account control panel).  If you don't have enough vertical space to show all your workspaces you can scroll, but there is no visual indicator that content is hidden.
 
 **Ideas for Improvement**
-  * Better indicator that there are hidden workspaces that you can scroll too (dynamically adjust spacing first?)
+  * Better indicator that there are hidden workspaces that you can scroll to (dynamically adjust spacing first?)
   * Labels are hidden on activities, but will come back if you resize the window.
