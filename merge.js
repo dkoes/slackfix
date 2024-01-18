@@ -18,7 +18,7 @@ function fixSlack() {
   let sidebar = document.querySelector('#team_sidebar_scroll_container');
   sidebar.prepend(tabrail);
 
-  let controls = document.querySelector('.p-control_strip');
+  let controls = document.querySelector('.p-client_workspace__layout .p-control_strip');
   controls.style.left = 0;
   controls.style.width = "64px";
 
@@ -31,25 +31,14 @@ function fixSlack() {
 
   sidebar.append(controls);
   
-  sentinal = document.createElement('span');  
-  sidebar.append(sentinal);
-  
-  const observer = new MutationObserver(function(mutationList, observer) {        
-      for(mut of mutationList) {
-          if(mut.type == "childList" && mut.removedNodes) {
-              if(!document.contains(sentinal)) {
-                  let old = sentinal;
-                  fixSlack();
-                  if(old != sentinal) {
-                      //successfully created new sentinal
-                      observer.disconnect();
-                  }
-                  return;
-              }
-          }
-      }
-  });
-  observer.observe(document.body, {childList:true});  
 }
 
 fixSlack();
+  
+const observer = new MutationObserver(function(mutationList, observer) {      
+    //if our fixes have been undone, reapply them  
+    if(document.querySelector('.p-client_workspace_wrapper').style['grid-template-columns'] != "0px auto") {
+          fixSlack();
+    }
+});
+observer.observe(document.body, {childList:true});  
