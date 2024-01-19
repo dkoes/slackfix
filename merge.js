@@ -30,15 +30,19 @@ function fixSlack() {
   sidebar.style['margin-top'] = '0px';
 
   sidebar.append(controls);
-  
+  console.log("FIXSLACK");
 }
 
 fixSlack();
   
-const observer = new MutationObserver(function(mutationList, observer) {      
-    //if our fixes have been undone, reapply them  
-    if(document.querySelector('.p-client_workspace_wrapper').style['grid-template-columns'] != "0px auto") {
+//for whatever reason, MutationObserver doesn't seem to be reliable any more, so
+//do the stupid thing and use an interval timer
+//I WILL BEND YOU TO MY WILL SLACK!
+
+setInterval(function() {
+    if(document.querySelector('.p-client_workspace_wrapper').style['grid-template-columns'] != "0px auto" ||
+        document.querySelector('.p-client_workspace__layout .p-control_strip') != null ) {
           fixSlack();
-    }
-});
-observer.observe(document.body, {childList:true});  
+    }    
+}, 1000);
+
