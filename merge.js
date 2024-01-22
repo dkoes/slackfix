@@ -13,14 +13,29 @@ function fixSlack() {
   document.querySelectorAll(".c-tabs__tab_content").forEach(e => e.style['padding'] = '2px 0px');
   document.querySelector(".p-tab_rail").style['width'] = '0px';
   
-  let tabrail = document.querySelector('.p-tab_rail__tab_menu');
+  document.querySelector('#team_sidebar_scroll_container .p-tab_rail__tab_menu');
+  
+  let tabrail = document.querySelector('.p-client_workspace_wrapper .p-tab_rail__tab_menu');
+  let oldtab = document.querySelector('#team_sidebar_scroll_container .p-tab_rail__tab_menu');
+  if(oldtab && tabrail) {
+    oldtab.remove();
+  }
+    
   let workspace = document.querySelector('.p-workspace_switcher_prototype');
   let sidebar = document.querySelector('#team_sidebar_scroll_container');
-  sidebar.prepend(tabrail);
-
+  
+  if(tabrail) {
+    sidebar.prepend(tabrail);
+  }
+  
   let controls = document.querySelector('.p-client_workspace__layout .p-control_strip');
   controls.style.left = 0;
   controls.style.width = "64px";
+  
+  let L = document.querySelectorAll('.p-control_strip');
+  for(let i = 0; i < L.length-1; i++) {
+    L[i].remove();
+  }
 
   document.querySelector('.p-client_workspace_wrapper').style['grid-template-columns'] = "0px auto";
   workspace.style['height'] = '100%';
