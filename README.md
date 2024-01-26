@@ -4,11 +4,20 @@ Hacks to make slack more usable.  Contributions gratefully accepted.  See extend
 ## Installing Hacks
  Copy and paste the code into the dev console (run `/slackdevtools` to open the console or set the `SLACK_DEVELOPER_MENU` environment variable to TRUE so you can right click on elements).  You will need to do this everytime you start slack or when slack does a full reload.
 
+### merge.js
+<img width="92" alt="image" src="https://github.com/dkoes/slackfix/assets/2342142/2858da60-e094-46ee-a7f3-2692bd1e8368">
+
+Removes the activity tab and merges it with the workspace switcher.  You can still hide/show the workspace switcher (which now contains the activity tab and the account control panel).  If you don't have enough vertical space to show all your workspaces you can scroll, but there is no visual indicator that content is hidden.
+
+**Ideas for Improvement**
+  * Better indicator that there are hidden workspaces that you can scroll to (dynamically adjust spacing first?)
+  * Labels are hidden on activities, but will come back if you resize the window.
+   
 ### button.js
 
 <img width="156" alt="image" src="https://user-images.githubusercontent.com/2342142/292336438-2863af2b-6467-40c7-8e5d-f736d04bb253.png">
 
- Add a button to show/hide activity tab.  This button floats on top of the workspace switcher and won't play nicely with the interface when the workspace switcher isn't open.
+ Add a button to show/hide activity tab.  This button floats on top of the workspace switcher and won't play nicely with the interface when the workspace switcher isn't open. **Note**: I use merge.js so this hack is unlikely to get updated to address slack changes.
 
 The activity tab is mostly empty space and consumes valuable screen real estate (especially if you run slack on a vertical monitor).  However, it is rarely needed (mostly to clear activity notification) so there is no harm in hiding it most the time.
 
@@ -20,11 +29,4 @@ The activity tab is mostly empty space and consumes valuable screen real estate 
   * Better icon (I just stole an existing asset)
   * Play nicer when the workspace switch isn't open (never true for me)
     
-### merge.js
-<img width="92" alt="image" src="https://github.com/dkoes/slackfix/assets/2342142/2858da60-e094-46ee-a7f3-2692bd1e8368">
 
-Removes the activity tab and merges it with the workspace switcher.  You can still hide/show the workspace switcher (which now contains the activity tab and the account control panel).  If you don't have enough vertical space to show all your workspaces you can scroll, but there is no visual indicator that content is hidden.
-
-**Ideas for Improvement**
-  * Better indicator that there are hidden workspaces that you can scroll to (dynamically adjust spacing first?)
-  * Labels are hidden on activities, but will come back if you resize the window.
