@@ -1,5 +1,5 @@
 # slackfix
-Hacks to make slack more usable.  Contributions gratefully accepted.  See extended discussion at [this gist](https://gist.github.com/Kenny-MWI/6b1a88ad38b5ffef347527a82becf054).
+Hacks to make slack more usable.  Contributions gratefully accepted.  See extended discussion at [this gist](https://gist.github.com/Kenny-MWI/6b1a88ad38b5ffef347527a82becf054). [Here](https://www.reddit.com/r/Slack/comments/16d9psg/comment/kwji8x6/?utm_source=share&utm_medium=web2x&context=3) is a reddit post describing how to make this permanent on Linux (I don't think it can be done on Mac since the app is signed).
 
 ## Installing Hacks
  Copy and paste the code into the dev console (run `/slackdevtools` to open the console or set the `SLACK_DEVELOPER_MENU` environment variable to TRUE so you can right click on elements).  You will need to do this everytime you start slack or when slack does a full reload.
